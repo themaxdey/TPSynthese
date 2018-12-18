@@ -23,7 +23,7 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         int max_ligne = 0;
 
 
-        public DataTable peuplerListBoxMagasin()
+        public Magasin[] peuplerListBoxMagasin()
         {
             string connString = "Provider=Microsfot.Jet.OLEBD.4.0;Data Source= " + chemin + bd + ";Persist Security Info=False";
             DataTable maTable = new DataTable();
@@ -64,11 +64,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
             {
                // reqSQL1 = "Aucune ligne sélectionné dans la base de données";
             }
+            
 
-            */
 
+            return maTable;*/
 
-            return maTable;
+            return tabMagasins;
         }
     }
 }
