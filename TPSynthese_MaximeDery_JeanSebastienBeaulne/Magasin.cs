@@ -8,15 +8,17 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 {
     class Magasin
     {
-        public int NoMagasin{ get; set;}
-        public string NomMagasin { get; set; }
-        public string Ville { get; set; }
+        public int noMagasin{ get; set;}
+        public string nomMagasin { get; set; }
+        public string ville { get; set; }
         
 
 
-        private Magasin()
+        public Magasin(int noMagasin, string nomMagasin, string ville)
         {
-
+            this.noMagasin = noMagasin;
+            this.nomMagasin = nomMagasin;
+            this.ville = ville;
         }
     }
    
