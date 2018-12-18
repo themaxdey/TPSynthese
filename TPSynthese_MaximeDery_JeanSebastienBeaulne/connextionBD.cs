@@ -17,10 +17,11 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         private string chemin = AppDomain.CurrentDomain.BaseDirectory + "\\";
         private string bd = "TablesMagasin.mbd";
 
-        private string reqSQL1 = "";
+        private string reqSQL1 = "select NoMagasin, NomMagasin, Ville group by Ville from Magasin";
         private string reqSQL2 = "";
 
         int max_ligne = 0;
+
 
         public DataTable peuplerListBoxMagasin()
         {
@@ -35,15 +36,25 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
             conn.Open();
 
-            daMagasin.Fill(ds, "Employes");
+            foreach (DataRow dr in ds.Tables["Magasin"].Rows)
+            {
+                maTable = ds.Tables[];
+            }
+
+            daMagasin.Fill(ds, "Magasin");
 
             conn.Close();
 
-            max_ligne = ds.Tables["Enployes"].Rows.Count;
+            max_ligne = ds.Tables["Magasin"].Rows.Count;
+
 
             if(max_ligne > 0)
             {
-                maTable = ds.Tables[];
+                maTable = ds.Tables[0];
+
+            } else
+            {
+               // reqSQL1 = "Aucune ligne sélectionné dans la base de données";
             }
 
 

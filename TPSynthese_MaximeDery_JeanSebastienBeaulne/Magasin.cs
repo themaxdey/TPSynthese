@@ -8,5 +8,16 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 {
     class Magasin
     {
+        public int NoMagasin{ get; set;}
+        public string NomMagasin { get; set; }
+        public string Ville { get; set; }
+        
+
+
+        private Magasin()
+        {
+
+        }
     }
+   
 }
