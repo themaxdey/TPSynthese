@@ -16,5 +16,15 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         {
             InitializeComponent();
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
