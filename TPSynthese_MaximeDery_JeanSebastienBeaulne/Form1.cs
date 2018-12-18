@@ -26,5 +26,10 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            labelTitre.Text = "Visualisation de la base de données";
+        }
     }
 }

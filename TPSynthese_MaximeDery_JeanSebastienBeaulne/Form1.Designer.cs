@@ -30,6 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBoxEmploye = new System.Windows.Forms.ListBox();
+            this.listBoxMagasin = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,11 +47,7 @@
             this.rechercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBoxMagasin = new System.Windows.Forms.ListBox();
-            this.listBoxEmploye = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelTitre = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -77,12 +77,48 @@
             this.tabPage1.Text = "Visualisation";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(412, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Sélection de l\'employé";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Sélection du magasin :";
+            // 
+            // listBoxEmploye
+            // 
+            this.listBoxEmploye.FormattingEnabled = true;
+            this.listBoxEmploye.Location = new System.Drawing.Point(415, 45);
+            this.listBoxEmploye.Name = "listBoxEmploye";
+            this.listBoxEmploye.Size = new System.Drawing.Size(236, 368);
+            this.listBoxEmploye.TabIndex = 1;
+            // 
+            // listBoxMagasin
+            // 
+            this.listBoxMagasin.FormattingEnabled = true;
+            this.listBoxMagasin.Location = new System.Drawing.Point(81, 45);
+            this.listBoxMagasin.Name = "listBoxMagasin";
+            this.listBoxMagasin.Size = new System.Drawing.Size(236, 368);
+            this.listBoxMagasin.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(798, 428);
+            this.tabPage2.Size = new System.Drawing.Size(837, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Intéractions";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -188,63 +224,28 @@
             this.àProposToolStripMenuItem.Text = "À propos";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
-            // label1
+            // labelTitre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Titre";
-            // 
-            // listBoxMagasin
-            // 
-            this.listBoxMagasin.FormattingEnabled = true;
-            this.listBoxMagasin.Location = new System.Drawing.Point(81, 45);
-            this.listBoxMagasin.Name = "listBoxMagasin";
-            this.listBoxMagasin.Size = new System.Drawing.Size(236, 368);
-            this.listBoxMagasin.TabIndex = 0;
-            // 
-            // listBoxEmploye
-            // 
-            this.listBoxEmploye.FormattingEnabled = true;
-            this.listBoxEmploye.Location = new System.Drawing.Point(415, 45);
-            this.listBoxEmploye.Name = "listBoxEmploye";
-            this.listBoxEmploye.Size = new System.Drawing.Size(236, 368);
-            this.listBoxEmploye.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Sélection du magasin :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(412, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Sélection de l\'employé";
+            this.labelTitre.AutoSize = true;
+            this.labelTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitre.Location = new System.Drawing.Point(16, 28);
+            this.labelTitre.Name = "labelTitre";
+            this.labelTitre.Size = new System.Drawing.Size(56, 25);
+            this.labelTitre.TabIndex = 2;
+            this.labelTitre.Text = "Titre";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 599);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitre);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "DB Utilizer 2019";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -273,7 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem àProposToolStripMenuItem;
         private System.Windows.Forms.ListBox listBoxMagasin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitre;
         private System.Windows.Forms.ListBox listBoxEmploye;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
