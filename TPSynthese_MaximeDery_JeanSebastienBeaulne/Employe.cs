@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 {
-    class Employe
+    public class Employe
     {
         public int noEmploye { get; set; }
         public string prenom { get; set; }
