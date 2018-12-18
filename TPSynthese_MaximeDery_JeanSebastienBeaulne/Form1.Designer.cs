@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxEmploye = new System.Windows.Forms.ListBox();
@@ -49,7 +50,6 @@
             this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelTitre = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -80,6 +80,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visualisation";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(30, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Ouvrir base de donnee";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -224,7 +233,7 @@
             // 
             this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
             this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.àProposToolStripMenuItem.Text = "À propos";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
@@ -240,21 +249,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 110);
+            this.button1.Location = new System.Drawing.Point(30, 112);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 30);
+            this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Ouvrir base de donnee";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(30, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Ajouter un enregistrement";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
