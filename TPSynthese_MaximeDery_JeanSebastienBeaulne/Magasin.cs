@@ -14,9 +14,9 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         
 
 
-        public Magasin(int noMagasin, string nomMagasin, string ville)
+        public Magasin(string noMagasin, string nomMagasin, string ville)
         {
-            this.noMagasin = noMagasin;
+            this.noMagasin = Int32.Parse(noMagasin);
             this.nomMagasin = nomMagasin;
             this.ville = ville;
         }

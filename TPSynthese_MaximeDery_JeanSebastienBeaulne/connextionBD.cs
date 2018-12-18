@@ -17,13 +17,13 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         private string chemin = AppDomain.CurrentDomain.BaseDirectory + "\\";
         private string bd = "TablesMagasin.mbd";
 
-        private string reqSQL1 = "select NoMagasin, NomMagasin, Ville group by Ville from Magasin";
+        private string reqSQL1 = "select NoMagasin, NomMagasin, Ville order by Ville from Magasin";
         private string reqSQL2 = "";
 
         int max_ligne = 0;
 
 
-        public DataTable peuplerListBoxMagasin()
+        public Magasin[] peuplerApplication()
         {
             string connString = "Provider=Microsfot.Jet.OLEBD.4.0;Data Source= " + chemin + bd + ";Persist Security Info=False";
             DataTable maTable = new DataTable();
@@ -40,11 +40,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
             conn.Close();
 
-            tabMagasins
+            int indice = 0;
+            Magasin[] tabMagasins = new Magasin[ds.Tables["Magasin"].Rows.Count];
 
             foreach (DataRow dr in ds.Tables["Magasin"].Rows)
             {
-                
+                tabMagasins[indice] = new Magasin(dr.ItemArray.GetValue(0).ToString(), dr[1].ToString(), dr[2].ToString());
             }
 
             /*
@@ -63,11 +64,14 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
             {
                // reqSQL1 = "Aucune ligne sélectionné dans la base de données";
             }
-
-
+            
 
 
             return maTable;*/
+
+            return tabMagasins;
         }
+
+
     }
 }
