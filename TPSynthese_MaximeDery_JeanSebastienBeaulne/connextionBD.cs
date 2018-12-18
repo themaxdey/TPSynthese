@@ -36,11 +36,18 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
             conn.Open();
 
+            daEmploye.Fill(ds, "Magasin");
+
+            conn.Close();
+
+            tabMagasins
+
             foreach (DataRow dr in ds.Tables["Magasin"].Rows)
             {
-               //TO DO maTable = ds.Tables[];
+                
             }
 
+            /*
             daMagasin.Fill(ds, "Magasin");
 
             conn.Close();
@@ -60,7 +67,7 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
 
 
-            return maTable;
+            return maTable;*/
         }
     }
 }
