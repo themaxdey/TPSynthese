@@ -38,7 +38,7 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
             foreach (DataRow dr in ds.Tables["Magasin"].Rows)
             {
-                maTable = ds.Tables[];
+               //TO DO maTable = ds.Tables[];
             }
 
             daMagasin.Fill(ds, "Magasin");

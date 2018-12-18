@@ -12,9 +12,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 {
     public partial class Form1 : Form
     {
+        public Magasin[] tabMagasins;
+
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
