@@ -40,11 +40,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
 
             conn.Close();
 
-            tabMagasins
+            int indice = 0;
+            Magasin[] tabMagasins = new Magasin[ds.Tables["Magasin"].Rows.Count];
 
             foreach (DataRow dr in ds.Tables["Magasin"].Rows)
             {
-                
+                tabMagasins[indice] = new Magasin(dr.ItemArray.GetValue(0).ToString(), dr[1].ToString(), dr[2].ToString());
             }
 
             /*
@@ -64,10 +65,10 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
                // reqSQL1 = "Aucune ligne sélectionné dans la base de données";
             }
 
+            */
 
 
-
-            return maTable;*/
+            return maTable;
         }
     }
 }
