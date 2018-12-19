@@ -10,6 +10,7 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
     {
         public int noEmploye { get; set; }
         public string prenom { get; set; }
+        public string nom { get; set; }
         public DateTime dateEmbauche { get; set; }
         public string posteEmploi { get; set; }
         public double salaire { get; set; }
@@ -22,11 +23,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
         public string sexe { get; set; }
         public int noMagasin { get; set; }
 
-        public Employe(int noEmploye, string prenom, DateTime dateEmbauche, string posteEmploi, double salaire, double commission, string noTel, Boolean permanence, 
+        public Employe(int noEmploye, string prenom, string nom, DateTime dateEmbauche, string posteEmploi, double salaire, double commission, string noTel, Boolean permanence, 
                         int status, DateTime dateNaissance, string commentaire, string sexe, int noMagasin)
         {
             this.noEmploye = noEmploye;
             this.prenom = prenom;
+            this.nom = nom;
             this.dateEmbauche = dateEmbauche;
             this.posteEmploi = posteEmploi;
             this.salaire = salaire;
@@ -38,6 +40,12 @@ namespace TPSynthese_MaximeDery_JeanSebastienBeaulne
             this.commentaire = commentaire;
             this.sexe = sexe;
             this.noMagasin = noMagasin;
+        }
+
+        public override string ToString()
+        {
+
+            return prenom + nom;
         }
     }
 }

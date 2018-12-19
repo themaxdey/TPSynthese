@@ -51,9 +51,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.labelNumeroEmploye = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.richTextBoxCommentaire = new System.Windows.Forms.RichTextBox();
+            this.dateTimePickerEmbauche = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNaissance = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,11 +61,11 @@
             this.textBoxNumTel = new System.Windows.Forms.TextBox();
             this.textBoxPrenom = new System.Windows.Forms.TextBox();
             this.groupBoxMagasin = new System.Windows.Forms.GroupBox();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButtonStMartin = new System.Windows.Forms.RadioButton();
+            this.radioButtonStCatherine = new System.Windows.Forms.RadioButton();
+            this.radioButtonRosemont = new System.Windows.Forms.RadioButton();
+            this.radioButtonHauteVille = new System.Windows.Forms.RadioButton();
+            this.radioButtonStRoch = new System.Windows.Forms.RadioButton();
             this.groupBoxPermanence = new System.Windows.Forms.GroupBox();
             this.radioButtonPermanenceNon = new System.Windows.Forms.RadioButton();
             this.radioButtonPermanenceOui = new System.Windows.Forms.RadioButton();
@@ -73,11 +73,11 @@
             this.radioButtonSexeFemme = new System.Windows.Forms.RadioButton();
             this.radioButtonSexeHomme = new System.Windows.Forms.RadioButton();
             this.groupBoxPoste = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonDirecteur = new System.Windows.Forms.RadioButton();
+            this.radioButtonGerant = new System.Windows.Forms.RadioButton();
+            this.radioButtonAnalyste = new System.Windows.Forms.RadioButton();
+            this.radioButtonConseiller = new System.Windows.Forms.RadioButton();
+            this.radioButtonVendeur = new System.Windows.Forms.RadioButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirLaBaseDeDonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,6 +176,7 @@
             // 
             // buttonSupprimer
             // 
+            this.buttonSupprimer.Enabled = false;
             this.buttonSupprimer.Location = new System.Drawing.Point(20, 120);
             this.buttonSupprimer.Name = "buttonSupprimer";
             this.buttonSupprimer.Size = new System.Drawing.Size(75, 23);
@@ -186,6 +187,7 @@
             // 
             // buttonModifier
             // 
+            this.buttonModifier.Enabled = false;
             this.buttonModifier.Location = new System.Drawing.Point(20, 79);
             this.buttonModifier.Name = "buttonModifier";
             this.buttonModifier.Size = new System.Drawing.Size(75, 23);
@@ -241,6 +243,7 @@
             this.listBoxEmploye.Name = "listBoxEmploye";
             this.listBoxEmploye.Size = new System.Drawing.Size(236, 368);
             this.listBoxEmploye.TabIndex = 1;
+            this.listBoxEmploye.SelectedIndexChanged += new System.EventHandler(this.listBoxEmploye_SelectedIndexChanged);
             // 
             // listBoxMagasin
             // 
@@ -249,6 +252,7 @@
             this.listBoxMagasin.Name = "listBoxMagasin";
             this.listBoxMagasin.Size = new System.Drawing.Size(236, 368);
             this.listBoxMagasin.TabIndex = 0;
+            this.listBoxMagasin.SelectedIndexChanged += new System.EventHandler(this.listBoxMagasin_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -260,9 +264,9 @@
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.labelNumeroEmploye);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.richTextBox1);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.richTextBoxCommentaire);
+            this.tabPage2.Controls.Add(this.dateTimePickerEmbauche);
+            this.tabPage2.Controls.Add(this.dateTimePickerNaissance);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label1);
@@ -360,30 +364,30 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Employé # : ";
             // 
-            // richTextBox1
+            // richTextBoxCommentaire
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Location = new System.Drawing.Point(508, 321);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(248, 140);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.richTextBoxCommentaire.BackColor = System.Drawing.SystemColors.Window;
+            this.richTextBoxCommentaire.Location = new System.Drawing.Point(508, 321);
+            this.richTextBoxCommentaire.Name = "richTextBoxCommentaire";
+            this.richTextBoxCommentaire.Size = new System.Drawing.Size(248, 140);
+            this.richTextBoxCommentaire.TabIndex = 12;
+            this.richTextBoxCommentaire.Text = "";
             // 
-            // dateTimePicker2
+            // dateTimePickerEmbauche
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(556, 244);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 5;
+            this.dateTimePickerEmbauche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerEmbauche.Location = new System.Drawing.Point(556, 244);
+            this.dateTimePickerEmbauche.Name = "dateTimePickerEmbauche";
+            this.dateTimePickerEmbauche.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerEmbauche.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dateTimePickerNaissance
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(556, 182);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePickerNaissance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerNaissance.Location = new System.Drawing.Point(556, 182);
+            this.dateTimePickerNaissance.Name = "dateTimePickerNaissance";
+            this.dateTimePickerNaissance.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerNaissance.TabIndex = 4;
             // 
             // label5
             // 
@@ -438,11 +442,11 @@
             // 
             // groupBoxMagasin
             // 
-            this.groupBoxMagasin.Controls.Add(this.radioButton12);
-            this.groupBoxMagasin.Controls.Add(this.radioButton11);
-            this.groupBoxMagasin.Controls.Add(this.radioButton10);
-            this.groupBoxMagasin.Controls.Add(this.radioButton9);
-            this.groupBoxMagasin.Controls.Add(this.radioButton8);
+            this.groupBoxMagasin.Controls.Add(this.radioButtonStMartin);
+            this.groupBoxMagasin.Controls.Add(this.radioButtonStCatherine);
+            this.groupBoxMagasin.Controls.Add(this.radioButtonRosemont);
+            this.groupBoxMagasin.Controls.Add(this.radioButtonHauteVille);
+            this.groupBoxMagasin.Controls.Add(this.radioButtonStRoch);
             this.groupBoxMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxMagasin.Location = new System.Drawing.Point(256, 165);
             this.groupBoxMagasin.Name = "groupBoxMagasin";
@@ -451,65 +455,65 @@
             this.groupBoxMagasin.TabStop = false;
             this.groupBoxMagasin.Text = "Magasin";
             // 
-            // radioButton12
+            // radioButtonStMartin
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton12.Location = new System.Drawing.Point(8, 125);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(110, 19);
-            this.radioButton12.TabIndex = 4;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "St-Martin, Laval";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButtonStMartin.AutoSize = true;
+            this.radioButtonStMartin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonStMartin.Location = new System.Drawing.Point(8, 125);
+            this.radioButtonStMartin.Name = "radioButtonStMartin";
+            this.radioButtonStMartin.Size = new System.Drawing.Size(110, 19);
+            this.radioButtonStMartin.TabIndex = 4;
+            this.radioButtonStMartin.TabStop = true;
+            this.radioButtonStMartin.Text = "St-Martin, Laval";
+            this.radioButtonStMartin.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // radioButtonStCatherine
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton11.Location = new System.Drawing.Point(8, 102);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(155, 19);
-            this.radioButton11.TabIndex = 3;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Ste-Catherine, Montréal";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButtonStCatherine.AutoSize = true;
+            this.radioButtonStCatherine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonStCatherine.Location = new System.Drawing.Point(8, 102);
+            this.radioButtonStCatherine.Name = "radioButtonStCatherine";
+            this.radioButtonStCatherine.Size = new System.Drawing.Size(155, 19);
+            this.radioButtonStCatherine.TabIndex = 3;
+            this.radioButtonStCatherine.TabStop = true;
+            this.radioButtonStCatherine.Text = "Ste-Catherine, Montréal";
+            this.radioButtonStCatherine.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // radioButtonRosemont
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton10.Location = new System.Drawing.Point(8, 79);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(137, 19);
-            this.radioButton10.TabIndex = 2;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Rosemont, Montréal";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButtonRosemont.AutoSize = true;
+            this.radioButtonRosemont.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonRosemont.Location = new System.Drawing.Point(8, 79);
+            this.radioButtonRosemont.Name = "radioButtonRosemont";
+            this.radioButtonRosemont.Size = new System.Drawing.Size(137, 19);
+            this.radioButtonRosemont.TabIndex = 2;
+            this.radioButtonRosemont.TabStop = true;
+            this.radioButtonRosemont.Text = "Rosemont, Montréal";
+            this.radioButtonRosemont.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // radioButtonHauteVille
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(8, 56);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(134, 19);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Haute-Ville, Québec";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButtonHauteVille.AutoSize = true;
+            this.radioButtonHauteVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHauteVille.Location = new System.Drawing.Point(8, 56);
+            this.radioButtonHauteVille.Name = "radioButtonHauteVille";
+            this.radioButtonHauteVille.Size = new System.Drawing.Size(134, 19);
+            this.radioButtonHauteVille.TabIndex = 1;
+            this.radioButtonHauteVille.TabStop = true;
+            this.radioButtonHauteVille.Text = "Haute-Ville, Québec";
+            this.radioButtonHauteVille.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // radioButtonStRoch
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(8, 33);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(118, 19);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "St-Roch, Québec";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButtonStRoch.AutoSize = true;
+            this.radioButtonStRoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonStRoch.Location = new System.Drawing.Point(8, 33);
+            this.radioButtonStRoch.Name = "radioButtonStRoch";
+            this.radioButtonStRoch.Size = new System.Drawing.Size(118, 19);
+            this.radioButtonStRoch.TabIndex = 0;
+            this.radioButtonStRoch.TabStop = true;
+            this.radioButtonStRoch.Text = "St-Roch, Québec";
+            this.radioButtonStRoch.UseVisualStyleBackColor = true;
             // 
             // groupBoxPermanence
             // 
@@ -581,11 +585,11 @@
             // 
             // groupBoxPoste
             // 
-            this.groupBoxPoste.Controls.Add(this.radioButton5);
-            this.groupBoxPoste.Controls.Add(this.radioButton4);
-            this.groupBoxPoste.Controls.Add(this.radioButton3);
-            this.groupBoxPoste.Controls.Add(this.radioButton2);
-            this.groupBoxPoste.Controls.Add(this.radioButton1);
+            this.groupBoxPoste.Controls.Add(this.radioButtonDirecteur);
+            this.groupBoxPoste.Controls.Add(this.radioButtonGerant);
+            this.groupBoxPoste.Controls.Add(this.radioButtonAnalyste);
+            this.groupBoxPoste.Controls.Add(this.radioButtonConseiller);
+            this.groupBoxPoste.Controls.Add(this.radioButtonVendeur);
             this.groupBoxPoste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxPoste.Location = new System.Drawing.Point(48, 165);
             this.groupBoxPoste.Name = "groupBoxPoste";
@@ -594,65 +598,65 @@
             this.groupBoxPoste.TabStop = false;
             this.groupBoxPoste.Text = "Poste de l\'employé";
             // 
-            // radioButton5
+            // radioButtonDirecteur
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(6, 127);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(75, 19);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Directeur";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButtonDirecteur.AutoSize = true;
+            this.radioButtonDirecteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDirecteur.Location = new System.Drawing.Point(6, 127);
+            this.radioButtonDirecteur.Name = "radioButtonDirecteur";
+            this.radioButtonDirecteur.Size = new System.Drawing.Size(75, 19);
+            this.radioButtonDirecteur.TabIndex = 4;
+            this.radioButtonDirecteur.TabStop = true;
+            this.radioButtonDirecteur.Text = "Directeur";
+            this.radioButtonDirecteur.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButtonGerant
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(6, 103);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(62, 19);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Gérant";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonGerant.AutoSize = true;
+            this.radioButtonGerant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonGerant.Location = new System.Drawing.Point(6, 103);
+            this.radioButtonGerant.Name = "radioButtonGerant";
+            this.radioButtonGerant.Size = new System.Drawing.Size(62, 19);
+            this.radioButtonGerant.TabIndex = 3;
+            this.radioButtonGerant.TabStop = true;
+            this.radioButtonGerant.Text = "Gérant";
+            this.radioButtonGerant.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonAnalyste
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(6, 79);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(70, 19);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Analyste";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonAnalyste.AutoSize = true;
+            this.radioButtonAnalyste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAnalyste.Location = new System.Drawing.Point(6, 79);
+            this.radioButtonAnalyste.Name = "radioButtonAnalyste";
+            this.radioButtonAnalyste.Size = new System.Drawing.Size(70, 19);
+            this.radioButtonAnalyste.TabIndex = 2;
+            this.radioButtonAnalyste.TabStop = true;
+            this.radioButtonAnalyste.Text = "Analyste";
+            this.radioButtonAnalyste.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonConseiller
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 19);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Conseiller";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonConseiller.AutoSize = true;
+            this.radioButtonConseiller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonConseiller.Location = new System.Drawing.Point(6, 55);
+            this.radioButtonConseiller.Name = "radioButtonConseiller";
+            this.radioButtonConseiller.Size = new System.Drawing.Size(80, 19);
+            this.radioButtonConseiller.TabIndex = 1;
+            this.radioButtonConseiller.TabStop = true;
+            this.radioButtonConseiller.Text = "Conseiller";
+            this.radioButtonConseiller.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonVendeur
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Vendeur";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonVendeur.AutoSize = true;
+            this.radioButtonVendeur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVendeur.Location = new System.Drawing.Point(6, 30);
+            this.radioButtonVendeur.Name = "radioButtonVendeur";
+            this.radioButtonVendeur.Size = new System.Drawing.Size(71, 19);
+            this.radioButtonVendeur.TabIndex = 0;
+            this.radioButtonVendeur.TabStop = true;
+            this.radioButtonVendeur.Text = "Vendeur";
+            this.radioButtonVendeur.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -834,29 +838,29 @@
         private System.Windows.Forms.GroupBox groupBoxPoste;
         private System.Windows.Forms.Label labelNumeroEmploye;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox richTextBoxCommentaire;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEmbauche;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNaissance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.TextBox textBoxNumTel;
         private System.Windows.Forms.TextBox textBoxPrenom;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButtonStMartin;
+        private System.Windows.Forms.RadioButton radioButtonStCatherine;
+        private System.Windows.Forms.RadioButton radioButtonRosemont;
+        private System.Windows.Forms.RadioButton radioButtonHauteVille;
+        private System.Windows.Forms.RadioButton radioButtonStRoch;
         private System.Windows.Forms.RadioButton radioButtonPermanenceNon;
         private System.Windows.Forms.RadioButton radioButtonPermanenceOui;
         private System.Windows.Forms.RadioButton radioButtonSexeFemme;
         private System.Windows.Forms.RadioButton radioButtonSexeHomme;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonDirecteur;
+        private System.Windows.Forms.RadioButton radioButtonGerant;
+        private System.Windows.Forms.RadioButton radioButtonAnalyste;
+        private System.Windows.Forms.RadioButton radioButtonConseiller;
+        private System.Windows.Forms.RadioButton radioButtonVendeur;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
